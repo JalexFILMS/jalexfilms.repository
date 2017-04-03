@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.avispa"
+       name="Avispa Negra"
+       version="0.0.1"
+       provider-name="Alex Lopez Rodriguez">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.liveresolver" version="0.1.24" optional="true"/>
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" version="5.2.1"/>
+    <import addon="script.module.urlresolver" version="3.0.23"/>
+    <import addon="script.module.simplejson" />    
+     <import addon="script.module.livestreamer" optional="true"/>
+     <import addon="script.module.pyamf" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>JalexFILMS presenta Avispa Negra Creado por Alex Lopez Rodriguez Espero disfruten el contenido¡¡¡</summary>
+    <description>
+        Este Add-on esta creado para transmitir contenido latino...
+    </description>
+    <platform>all</platform>
+  </extension>
+</addon>
