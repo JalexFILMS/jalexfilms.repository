@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.cuba-build" name="CUBA-TV BUILD" version="0.0.2" provider-name="Alex Lopez Rodriguez">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+		<summary lang="en">CUBA-TV Wizard</summary>
+		<description lang="en">Wizard cuba-tv este build contiene todas las herramientas y scripts necesarios para que cuba-tv funcione perfectamente una manera mas interactiva de usar cuba-tv espero lo disfrutes para mas informacion comunicate al correo electronico cubanoloco85@gmail.com</description>
+		<disclaimer lang="en">El contenido de cuba-tv es de dominio publico"Creador"Alex Lopez Rodriguez.</disclaimer>
+		<source>http://repo.cuba-tv.com/</source>
+		<website>http://cuba-tv-kodi.org</website>
+		<platform>all</platform>
+	</extension>
+</addon>

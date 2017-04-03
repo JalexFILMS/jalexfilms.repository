@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.metropolitan" name="Metropolitan" version="1.1" provider-name="Metropolitan">
+	<extension point="xbmc.addon.repository" name="Metropolitan">
+		<info compressed="false">http://bendermutt.com/addons.xml</info>
+		<checksum>http://bendermutt.com/addons.xml.md5</checksum>
+		<datadir zip="true">http://bendermutt.com/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Metropolitan addon</summary>
+		<description>Entretenimiento Latino</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+

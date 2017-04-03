@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.jalexfilms" name="[COLOR red].[/COLOR]JalexFilms [COLOR red]Repository[/COLOR]" version="0.0.1" provider-name="[COLOR red]Alex López Rodríguez[/COLOR]">
+	<extension point="xbmc.addon.repository" name="[COLOR red].[/COLOR]JalexFilms [COLOR red]Repository[/COLOR]">
+            <info compressed="false">http://jalexfilmscom.ipage.com/repository/file/addons.xml</info>
+            <checksum>http://jalexfilmscom.ipage.com/repository/file/addons.xml.md5</checksum>
+            <datadir zip="true">http://jalexfilmscom.ipage.com/repository/file</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Repo [COLOR red]JalexFilms[/COLOR] por [COLOR blue]Alex López Rodríguez[/COLOR]</summary>
+		<description>Este Repositorio esta creado por el creador del addon latino CUBA-TV Y el objetivo de este es llevar contenido a los creadores de addons y listas para xbmc kodi los archivos que se encuentran en esta repo son una recopilacion de internet JalexFilms y CUBA-TV te dan las gracias por tu preferencia...</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+
