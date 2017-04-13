@@ -999,4 +999,58 @@ enlaces estan colocado de manera libre en interNET.
   </extension>
 </addon>
 
+
+<addon id="plugin.video.colombiatv"
+       name="ColombiaTV"
+       version="1.4.1"
+       provider-name="Wiiego">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.simplejson" />
+    <import addon="script.common.plugin.cache" version="2.5.1" />
+    <import addon="script.module.parsedom" version="2.5.1" />
+    <import addon="script.module.simple.downloader" version="0.9.4" />
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.urlresolver" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">ColombiaTV</summary>
+    <description lang="en">ColombiaTV is the best addon to watch the main TV Channels and shows from Colombia</description>
+    <description lang="es">ColombiaTV es el mejor addon para ver los principales canales y programas de Televisión de Colombia</description>
+  </extension>
+</addon>
+
+<addon id="plugin.video.MiamiList"
+       name="MiamiList"
+       version="1.1.1"
+       provider-name="Doc Shadrach">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />    
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>based on livestreamspro 2.0.1 by Shani</summary>
+    <description>Lista de canales de MiamiList.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 </addons>
