@@ -1053,4 +1053,17 @@ enlaces estan colocado de manera libre en interNET.
   </extension>
 </addon>
 
+<addon id="Vikings.Repo" name="[COLOR orange]Vikings[/COLOR] Repo" version="0.0.1" provider-name="alex">
+    <extension point="xbmc.addon.repository" name="los5 repo">
+        <info compressed="false">http://iptvikings.tk/Plugins/addons.xml</info>
+        <checksum>http://iptvikings.tk/Plugins/addons.xml.md5</checksum>
+        <datadir zip="true">http://iptvikings.tk/Plugins/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>vikings 100% original</summary>
+        <description>[COLOR fuchsia]Repository Vikings [/COLOR]</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
 </addons>
