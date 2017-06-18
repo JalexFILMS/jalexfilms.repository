@@ -1066,4 +1066,74 @@ enlaces estan colocado de manera libre en interNET.
     </extension>
 </addon>
 
+<addon id="repository.aresproject" name="[COLOR blue]A[/COLOR][COLOR white]res Project[/COLOR]" version="0.0.6" provider-name="Ares Team">
+  <extension point="xbmc.addon.repository" name="AresRepo">
+    <info compressed="false">http://repo.ares-project.com/plugins/addons.xml</info>
+    <checksum>http://repo.ares-project.com/plugins/addons.xml.md5</checksum>
+    <datadir zip="true">http://repo.ares-project.com/plugins/</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>AresProject.</summary>
+    <description>Ares-Project Addons Source. Visit Us At https://ares-project.uk</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.dandymedia" name="Dandymedia Repository" version="1.0.1" provider-name="Dandymedia">
+    <extension point="xbmc.addon.repository" name="Dandymedia Repository">
+        <info compressed="true">https://github.com/dandy0850/dandymedia/raw/master/addons.xml</info>
+        <checksum>https://github.com/dandy0850/dandymedia/raw/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://github.com/dandy0850/dandymedia/raw/master/repo</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Dandymedia Repository</summary>
+        <description>Dandymedia collection all addons</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="repository.intrcomp" name="[COLOR white][B]INTRCOMP MEDIA[/B][/COLOR]" version="2.3" provider-name="[COLOR white][B]INTRCOMP MEDIA[/B][/COLOR]">
+  <extension point="xbmc.addon.repository" name="Intrcomp Media">
+    <info compressed="false">http://intrcomp.net/Plugins/addons.xml</info>
+    <checksum>http://intrcomp.net/Plugins/addons.xml.md5</checksum>
+    <datadir zip="true">http://intrcomp.net/Plugins/</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>[COLOR white]Repositorio Intrcomp Media[/COLOR]</summary>
+    <description>[COLOR yellow]Intrcomp Media es un repositorio con el fin de facilitar la instalacion de addons que no tienen repositorios.
+    De esta manera los addons son automaticamente actualizados. Cada addon tiene su dueño. Todos los creditos de los addons son para sus
+    creadores. Si Usted tiene un addon y no tiene un Host donde alojarlo con mucho gusto lo puede alojar en este repo si es de su interés. Me puede enviar
+    email a intrcomp@gmail.com y con mucho gusto le ayudare. La meta de Intrcomp Media es unir a la commnidad especialmente Latina en esta plataforma Open Source.
+    Gracias a todos por su Apoyo[/COLOR]</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.jesusboxtv" name="Jesusbox Repository" version="1.0.0" provider-name="Playonmonkey">
+  <extension point="xbmc.addon.repository" name="Jesusbox Repository">
+    <info compressed="false">http://www.jesusboxrepo.xyz/Plugins/addons.xml</info>
+    <checksum>http://www.jesusboxrepo.xyz/Plugins/addons.xml.md5</checksum>
+    <datadir zip="true">http://www.jesusboxrepo.xyz/Plugins</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Welcome to the Jesusbox Repository where you will find all Jesusbox produced Addon-ons and wizards</summary>
+    <description>The Best Media Center Box Available</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.mdrepo" name="Mucky Ducks Repo" version="1.0.2" provider-name="Mucky Duck">
+  <extension point="xbmc.addon.repository" name="Mucky Ducks Repo">
+    <info compressed="false">https://raw.githubusercontent.com/mucky-duck/mdrepo/master/addons.xml</info>
+    <checksum>https://raw.githubusercontent.com/mucky-duck/mdrepo/master/addons.xml.md5</checksum>
+    <datadir zip="true">https://raw.githubusercontent.com/mucky-duck/mdrepo/master/</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Mucky Ducks Repo</summary>
+    <description>Download And Install Addons Developed By Mucky Duck And Various Other Developers </description>
+    <disclaimer>The owners and submitters to this repository do not host or distribute any of the content displayed by these addons nor do they have any affiliation with the content providers.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 </addons>
