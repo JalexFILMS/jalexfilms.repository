@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <onload>RunScript(script.favourites)</onload>
+    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu)</onload>	
+    <include>OpenClose</include>
+    <controls>
+
+        <control type="group" description="Furniture">		
+		  <visible>!Player.HasVideo</visible>		  
+		  <control type="group" description="DEFAULT BG HOME">
+            <!--animation condition="!Container(9000).Row(0) | Container(9000).HasPrevious()" effect="slide" start="0,0" end="0,-590" time="220">Conditonal</animation-->			
+            <control type="image" description="Home Background">
+				<!-- <animation condition="[!Container(9000).Row(0) | Container(9000).HasPrevious()] + !Skin.HasTheme(White)" effect="slide" start="0,0" end="0,-590" time="220">Conditonal</animation>		 -->	
+				<visible>IsEmpty(Skin.String(CustomBgHome))</visible>
+                <width>1920</width>
+                <height>1080</height>
+                <aspectratio>stretch</aspectratio>
+                <texture background="true">$VAR[HomeBG]</texture>
+            </control>			
+					
+            <control type="image" description="Home ICON Banner">
+							
+				<visible>IsEmpty(Skin.String(CustomBgHome)) + !Skin.HasSetting(NoHomeBanner) + Container(9000).Row(0)</visible>				
+				<include condition="Skin.HasSetting(NoBannerAnimation)">homebanner_animation</include>				
+				<include condition="!Skin.HasSetting(NoBannerAnimation)">homebanner_static</include>										
+                <top>694</top>
+                <width>1920</width>
+                <height>286</height>
+                <aspectratio>stretch</aspectratio>
+                <include>right_listpanel_unfocused</include>
+            </control>		
+	      </control>	
+		  <control type="group" description="CUSTOM BG HOME">
+		  	<visible>!IsEmpty(Skin.String(CustomBgHome))</visible>
+            <control type="image" description="Home Background">
+                <width>1920</width>
+                <height>1080</height>
+                <aspectratio>scale</aspectratio>
+                <texture background="true">$VAR[HomeBG]</texture>
+            </control>
+<!--             <control type="image" description="ICON Banner">
+				<animation condition="!Container(9000).Row(0) | Container(9000).HasPrevious()" effect="slide" start="0,0" end="0,-590" time="220">Conditonal</animation>			
+				<visible>!IsEmpty(Skin.String(CustomBgHome))</visible>
+				<include condition="Skin.HasSetting(NoBannerAnimation)">homebanner_animation</include>					
+				<include condition="!Skin.HasSetting(NoBannerAnimation)">homebanner_static</include>							
+                <top>694</top>
+                <width>1920</width>
+                <height>286</height>
+                <aspectratio>stretch</aspectratio>
+                <include>right_listpanel_unfocused</include>
+            </control>	 -->	
+		  </control>	
+		  
+        </control>		
+			<control type="label">
+				<left>900</left>
+				<top>650</top>
+				
+				<label>Loading ...</label>
+				<visible>Container(311).IsUpdating + Container(9000).Row(0)</visible>
+				<textcolor>dimgray</textcolor>
+				<height>45</height>
+				<width>250</width>
+				
+				<font>size30</font>
+
+			</control>
+
+		<control type="videowindow" description="Homescreen Video Preview">
+			<width>1920</width>
+			<height>1080</height>
+			<visible>Window.IsActive(Home.xml) + Player.HasVideo</visible>
+			<aspectratio>scale</aspectratio>
+		</control>		
+
+        <control type="panel" id="9000" description="ICONE">
+            <animation condition="!Container(9000).Row(0)" effect="slide" start="0,0" end="0,-720" time="250">Conditonal</animation>	
+            <animation condition="[![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2)]]" effect="slide" start="0,0" end="0,-580" time="250">Conditonal</animation>	
+            <animation condition="[![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2) | Container(9000).Row(3) | Container(9000).Row(4) ]]" effect="slide" start="0,0" end="0,-580" time="250">Conditonal</animation>	
+             <animation condition="[![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2) | Container(9000).Row(3) | Container(9000).Row(4) | Container(9000).Row(5) | Container(9000).Row(6)]]" effect="slide" start="0,0" end="0,-580" time="250">Conditonal</animation>	
+			<animation condition="[![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2) | Container(9000).Row(3) | Container(9000).Row(4) |  Container(9000).Row(5) |  Container(9000).Row(6) |  Container(9000).Row(7) |  Container(9000).Row(8)]]" effect="slide" start="0,0" end="0,-580" time="220">Conditonal</animation>	
+            <animation condition="[![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2) | Container(9000).Row(3) | Container(9000).Row(4) |  Container(9000).Row(5) |  Container(9000).Row(6)|  Container(9000).Row(7) |  Container(9000).Row(8)|  Container(9000).Row(9) |  Container(9000).Row(10)]]" effect="slide" start="0,0" end="0,-580" time="220">Conditonal</animation>	
+            <animation condition="[![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2) | Container(9000).Row(3) | Container(9000).Row(4) |  Container(9000).Row(5) |  Container(9000).Row(6)|  Container(9000).Row(7) |  Container(9000).Row(8)|  Container(9000).Row(9) |  Container(9000).Row(10)|  Container(9000).Row(11) |  Container(9000).Row(12)]]" effect="slide" start="0,0" end="0,-580" time="220">Conditonal</animation>	
+            <animation condition="[![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2) | Container(9000).Row(3) | Container(9000).Row(4) |  Container(9000).Row(5) |  Container(9000).Row(6)|  Container(9000).Row(7) |  Container(9000).Row(8)|  Container(9000).Row(9) |  Container(9000).Row(10)|  Container(9000).Row(11) |  Container(9000).Row(12)|  Container(9000).Row(13) |  Container(9000).Row(14)]]" effect="slide" start="0,0" end="0,-580" time="220">Conditonal</animation>	
+            <animation condition="[![Container(9000).Row(0) | Container(9000).Row(1) | Container(9000).Row(2) | Container(9000).Row(3) | Container(9000).Row(4) |  Container(9000).Row(5) |  Container(9000).Row(6)|  Container(9000).Row(7) |  Container(9000).Row(8)|  Container(9000).Row(9) |  Container(9000).Row(10)|  Container(9000).Row(11) |  Container(9000).Row(12)|  Container(9000).Row(13) |  Container(9000).Row(14)|  Container(9000).Row(15) |  Container(9000).Row(16)]]" effect="slide" start="0,0" end="0,-580" time="220">Conditonal</animation>	
+
+			<centerleft>960</centerleft>
+            <top>710</top>
+            <width>1800</width>
+            <height>20000</height>
+            <onleft>9000</onleft>
+            <onright>9000</onright>
+            <onup>700</onup>
+            <ondown>noop</ondown>
+            <orientation>vertical</orientation>
+            <scrolltime tween="sine" easing="inout">280</scrolltime>
+            <itemlayout height="290" width="360">
+                <control type="image" description="shade_base">
+                    <centerleft>180</centerleft>
+                    <width>345</width>
+                    <height>235</height>
+                    <texture>icons/iconbase.png</texture>
+                </control>
+                <control type="image" description="color base">
+                    <centerleft>180</centerleft>
+                    <top>27</top>
+                    <width>287</width>
+                    <height>179</height>
+                    <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.Property(color)]</texture>
+                </control>
+                <control type="image" description="THMBSICONS">
+                    
+                    <centerleft>180</centerleft>
+                    <top>27</top>
+                    <width>287</width>
+                    <height>179</height>
+                    <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.Icon]</texture>
+                </control>
+                <control type="image" description="THMBSICONS">
+                    
+                    <centerleft>180</centerleft>
+                    <top>27</top>
+                    <width>287</width>
+                    <height>179</height>
+                    <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.label]</texture>
+                </control>
+                <control type="image" description="THMBS weather">
+                    <centerleft>180</centerleft>
+                    <top>27</top>
+                    <width>287</width>
+                    <height>179</height>
+                    <texture>$INFO[ListItem.Property(weatherthumb)]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>				
+				
+            </itemlayout>
+            <focusedlayout height="290" width="360">
+                <control type="group">		
+
+                    <animation effect="zoom" start="100" end="120" time="120" center="auto" tween="Back" easing="Out">Focus</animation>
+                    <animation effect="zoom" start="120" end="100" time="120" center="auto">unFocus</animation>															
+					<include condition="!Skin.HasSetting(ATV3select)">ATV4select</include>
+					<control type="image" description="color base">
+						<animation effect="zoom" start="100" end="8500" time="50" center="auto" tween="Back" easing="Out" delay="15000">Focus</animation>
+                        <top>125</top>
+						<centerleft>180</centerleft>
+                        <width>50</width>
+                        <height>50</height>
+                        <texture>shadow.png</texture>
+                    </control>
+									
+                    <control type="image" description="shade_base">
+						<animation effect="zoom" start="100" end="115" time="4000" center="auto" tween="Back" easing="Out" delay="15000">Focus</animation>
+                        <centerleft>180</centerleft>
+                        <width>360</width>
+                        <height>250</height>
+                        <texture>shadow.png</texture>
+                    </control>
+                    <control type="image" description="color base">
+                        <centerleft>180</centerleft>
+                        <top>27</top>
+                        <width>287</width>
+                        <height>179</height>
+                        <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.Property(color)]</texture>
+                    </control>
+                    <control type="image" description="THMBSICONS">
+						<animation effect="zoom" start="100" end="115" time="4000" center="auto" tween="Back" easing="Out" delay="15000">Focus</animation>					
+
+                       
+                        <centerleft>180</centerleft>
+                        <top>27</top>
+                        <width>287</width>
+                        <height>179</height>
+                        <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="image" description="THMBSICONS">
+                       
+                        <centerleft>180</centerleft>
+                        <top>27</top>
+                        <width>287</width>
+                        <height>179</height>
+                        <texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.label]</texture>
+                    </control>
+                    <control type="image" description="THMBS weather">
+                        <centerleft>180</centerleft>
+                        <top>27</top>
+                        <width>287</width>
+                        <height>179</height>
+                        <texture>$INFO[ListItem.Property(weatherthumb)]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                </control>
+                <control type="label" description="label">
+					<visible>!Player.HasVideo</visible>
+                    <animation effect="fade" start="0" end="100" time="150" delay="50">Focus</animation>
+                    <animation effect="fade" start="100" end="0" time="100">unFocus</animation>
+                    <centerleft>180</centerleft>
+                    <top>234</top>
+                    <width>368</width>
+                    <height>24</height>
+                    <font>size22</font>
+                    <align>center</align>
+					<scroll>true</scroll>
+                    <textcolor>whitesmoke</textcolor>
+                    <label>[B]$INFO[ListItem.label][/B]</label>
+                </control>
+				
+            </focusedlayout>
+            <content>
+<!--                 <item id="355">
+                    <visible>Skin.HasSetting(hidemovie) + Skin.HasSetting(hidetv)  + !Skin.HasSetting(hidevaddons)</visible>
+                    <thumb>special://skin/icons/vaddons.png</thumb>
+                    <label>$LOCALIZE[157] $LOCALIZE[24001]</label>
+                    <onclick>noop</onclick>
+                    <onclick>noop</onclick>
+                </item>	 -->			
+		
+
+
+                <item id="601" description="Shelf Favourite1">
+
+                    <thumb>$INFO[Skin.String(ShelfMyTvList1.Thumb)]</thumb>
+                    <label>$INFO[Skin.String(ShelfMyTvList1.Label)]</label>
+                    <property name="color">icons/red.png</property>
+                    <onclick>$INFO[Skin.String(ShelfMyTvList1.Action)]</onclick>
+                </item>
+
+                <item id="602" description="Shelf Favourite2">
+
+                    <thumb>$INFO[Skin.String(ShelfMyTvList2.Thumb)]</thumb>
+                    <label>$INFO[Skin.String(ShelfMyTvList2.Label)]</label>
+                    <property name="color">icons/red.png</property>
+                    <onclick>$INFO[Skin.String(ShelfMyTvList2.Action)]</onclick>
+                </item>
+
+                <item id="603" description="Shelf Favourite3">
+
+                    <thumb>$INFO[Skin.String(ShelfMyTvList3.Thumb)]</thumb>
+                    <label>$INFO[Skin.String(ShelfMyTvList3.Label)]</label>
+                    <property name="color">icons/red.png</property>
+                    <onclick>$INFO[Skin.String(ShelfMyTvList3.Action)]</onclick>
+                </item>
+
+                <item id="604" description="Shelf Favourite4">
+
+                    <thumb>$INFO[Skin.String(ShelfMyTvList4.Thumb)]</thumb>
+                    <label>$INFO[Skin.String(ShelfMyTvList4.Label)]</label>
+                    <property name="color">icons/red.png</property>
+                    <onclick>$INFO[Skin.String(ShelfMyTvList4.Action)]</onclick>
+                </item>
+
+                <item id="605" description="Shelf Favourite5">
+
+                    <thumb>$INFO[Skin.String(ShelfMyTvList5.Thumb)]</thumb>
+                    <label>$INFO[Skin.String(ShelfMyTvList5.Label)]</label>
+                    <property name="color">icons/red.png</property>
+                    <onclick>$INFO[Skin.String(ShelfMyTvList5.Action)]</onclick>
+                </item>
+				
+                <item id="343">
+                  
+                    <label>24001</label>
+                    <thumb>special://skin/icons/addons.png</thumb>
+                    <onclick>ActivateWindow(1118)</onclick>
+                </item>
+                <item id="340">
+                    <visible>!Skin.HasSetting(hidemovie)</visible>
+                    <label>342</label>
+                    <thumb>special://skin/icons/movies.png</thumb>
+                    <onclick condition="Library.HasContent(Movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
+                    <onclick condition="!Library.HasContent(Movies)">ActivateWindow(Videos,root)</onclick>
+                </item>
+                <item id="341">
+                    <visible>!Skin.HasSetting(hidetv)</visible>
+                    <label>20343</label>
+                    <thumb>special://skin/icons/tvshows.png</thumb>
+                    <onclick condition="Library.HasContent(TVShows)">ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
+                    <onclick condition="!Library.HasContent(TVShows)">ActivateWindow(Videos,root)</onclick>
+                </item>					
+
+                <item id="352">
+                    <visible>!Skin.HasSetting(hidefav)</visible>
+                    <thumb>special://skin/icons/favs.png</thumb>
+                    <label>$LOCALIZE[1036]</label>
+                    <property name="color">icons/red.png</property>
+                    <onclick>ActivateWindow(134)</onclick>
+                </item>	
+
+                <item id="345">
+                    <visible>!Skin.HasSetting(hideyoutube)</visible>
+                    <label>Youtube</label>
+                    <thumb>special://skin/icons/youtube.png</thumb>
+                    <onclick>RunAddon(plugin.video.youtube)</onclick>
+                </item>
+                <item id="3000">
+                    <visible>!Skin.HasSetting(hidevimeo)</visible>
+                    <label>Vimeo</label>
+                    <thumb>special://skin/icons/vimeo.png</thumb>
+                    <onclick>RunAddon(plugin.video.vimeo)</onclick>
+                </item>
+                <item id="3001">
+                    <visible>!Skin.HasSetting(hidetwitch)</visible>
+                    <label>Twitch</label>
+                    <thumb>special://skin/icons/twitch.png</thumb>
+                    <onclick>RunAddon(plugin.video.twitch)</onclick>
+                </item>	
+                <item id="3001">
+                    <visible>!Skin.HasSetting(hideted)</visible>
+                    <label>Ted Talks</label>
+                    <thumb>special://skin/icons/ted.png</thumb>
+                    <onclick>RunAddon(plugin.video.ted.talks)</onclick>
+                </item>								
+					
+                <item id="355">
+					<visible>!Skin.HasSetting(livetvmenu)</visible>
+                    <label>$LOCALIZE[31059]</label>
+                    <thumb>special://skin/icons/LiveTV.png</thumb>
+                    <onclick>ActivateWindow(1718)</onclick>
+                    <visible>!Pvr.IsRecording + System.GetBool(pvrmanager.enabled) + !Skin.HasSetting(PVRhide)</visible>
+                </item>	
+
+				<include>skinshortcuts-mainmenu</include>	
+
+
+
+				
+                <item id="345">
+                    <visible>!Skin.HasSetting(hidewtr)</visible>
+                    <property name="weatherthumb">$INFO[Weather.Conditions]</property>
+                    <label>$INFO[Weather.Temperature]</label>
+                    <property name="color">images/White.png</property>
+                    <onclick>ActivateWindow(MyWeather)</onclick>
+                </item>
+
+                <item id="344">
+                    <visible>!Skin.HasSetting(hidepic)</visible>
+                    <label>1</label>
+                    <thumb>special://skin/icons/photos.png</thumb>
+                    <onclick>ActivateWindow(2)</onclick>
+                </item>
+
+                <item id="3500">
+                    <visible>!Skin.HasSetting(hidevaddons)</visible>
+                    <thumb>special://skin/icons/vaddons.png</thumb>
+                    <label>Videos</label>
+                    <onclick>ActivateWindow(Videos)</onclick>
+                </item>
+                <item id="342">
+                    <visible>!Skin.HasSetting(hidemusic)</visible>
+                    <label>2</label>
+                    <thumb>special://skin/icons/music.png</thumb>
+                    <onclick>ActivateWindow(502,$INFO[Skin.String(MusicLink)])</onclick>
+                    <onclick condition="!Library.HasContent(Music)">ActivateWindow(501,root)</onclick>
+                </item>
+                <item id="350">
+                    <visible>!Skin.HasSetting(hideprog)</visible>
+                    <thumb>special://skin/icons/program.png</thumb>
+                    <label>0</label>
+                    <onclick>ActivateWindow(Programs)</onclick>
+                </item>
+                <item id="347">
+                    <visible>!Skin.HasSetting(hideSources)</visible>
+                    <thumb>special://skin/icons/sources.png</thumb>
+                    <label>20094</label>
+                    <onclick>ActivateWindow(1115)</onclick>
+                </item>
+                <item id="355">
+                    <visible>Skin.HasSetting(hidesearch) + System.HasAddon(script.globalsearch)</visible>
+                    <thumb>special://skin/icons/search.png</thumb>
+                    <label>Search</label>
+                    <onclick>RunScript(script.globalsearch)</onclick>
+                </item>
+                <item id="353">
+                    <visible>!Skin.HasSetting(hidebro)</visible>
+                    <thumb>special://skin/icons/browser.png</thumb>
+                    <label>7</label>
+                    <onclick>ActivateWindow(3)</onclick>
+                </item>
+                <item id="354">
+                    <visible>![System.Platform.ios | System.Platform.atv2]</visible>
+                    <visible>!Skin.HasSetting(XBMC3)</visible>
+                    <visible>System.HasMediadvd</visible>
+                    <thumb>special://skin/icons/DVD.png</thumb>
+                    <label>$INFO[System.DVDLabel]</label>
+                    <onclick>ActivateWindow(1112)</onclick>
+                </item>
+                <item id="348">
+                    <thumb>special://skin/icons/settings.png</thumb>
+                    <label>5</label>
+                    <onclick>ActivateWindow(1120)</onclick>
+                </item>
+                <item id="349">
+                    <visible>Player.HasMedia</visible>
+                    <thumb>special://skin/icons/full.png</thumb>
+                    <label>31064</label>
+                    <property name="color">icons/green3.png</property>
+                    <onclick condition="Player.HasMedia">Fullscreen</onclick>
+                </item>
+                <item id="349">
+                    <visible>!Player.HasMedia + Skin.HasSetting(quitter) + !Skin.HasSetting(hidePwr)</visible>
+                    <thumb>special://skin/icons/quits.png</thumb>
+                    <label>$VAR[QuitLabel]</label>
+                    <property name="color">special://skin/icons/quits.png</property>
+                    <onclick condition="StringCompare(Skin.String(shutdown),quit)">XBMC.quit()</onclick>
+                    <onclick condition="StringCompare(Skin.String(shutdown),powerdown)">XBMC.powerdown()</onclick>
+                    <onclick condition="StringCompare(Skin.String(shutdown),hibernate)">XBMC.hibernate()</onclick>
+                    <onclick condition="StringCompare(Skin.String(shutdown),suspend)">XBMC.suspend()</onclick>
+                    <onclick condition="StringCompare(Skin.String(shutdown),reboot)">XBMC.reboot()</onclick>															
+                </item>				
+                <item id="349">
+                    <visible>!Player.HasMedia + !Skin.HasSetting(quitter) + !Skin.HasSetting(hidePwr)</visible>
+                    <thumb>special://skin/icons/quits.png</thumb>
+                    <label>351</label>
+                    <onclick>ActivateWindow(ShutdownMenu)</onclick>
+					<property name="color">special://skin/icons/quits.png</property>
+                </item>
+				
+          </content>
+        </control>	
+        <!--ATV3 SLIDER-->
+
+ 
+
+
+		<include condition="Skin.HasSetting(ATV3select)">ATV3select</include>		
+	  <control type="group" description="SHELF">	
+		<visible>!Player.HasVideo</visible>
+        <include>weather_shelf</include>
+        <control type="group" id="700" description="Shelf items">
+            <animation condition="!Container(9000).Row(0) | Container(9000).HasPrevious()" effect="slide" start="0,0" end="0,-500" time="220">Conditonal</animation>
+            <include>Movies</include>
+            <include>TV</include>
+            <include>Music_RA</include>
+            <include condition="Skin.HasSetting(PicturesShelf_Custom)">Pictures_Shortcuts</include>
+            <include condition="Skin.HasSetting(AddonsShelf_Custom)">Addons_Shortcuts</include>
+            <include condition="Skin.HasSetting(hidetv) + Skin.HasSetting(hidemovie)">VAddons_Shortcuts</include>
+            <include>Favsshelf</include>
+            <control type="image" description="Logo">
+                <visible>![[Container(9000).HasFocus(621) | Container(9000).HasFocus(622) | Container(9000).HasFocus(623) | Container(9000).HasFocus(624) | Container(9000).HasFocus(625)] | [Container(9000).HasFocus(340) + Library.HasContent(Movies)] | [Container(9000).HasFocus(341) + Library.HasContent(TVShows)] | [Container(9000).HasFocus(342) + Library.HasContent(Music)] | [Container(9000).HasFocus(342) + Control.IsVisible(313)] | [Container(9000).HasFocus(343) + Skin.HasSetting(AddonsShelf_Custom)] | [Container(9000).HasFocus(344) + Control.IsVisible(314)] | [Container(9000).HasFocus(349) + Player.HasMedia] | Container(9000).HasFocus(345) | Control.IsVisible(317) | [Container(9000).HasFocus(352) + Container(9000).Row(0) + IntegerGreaterThan(Window.Property(favourite.count),0)]]</visible>
+                <include>ShelfFade</include>
+                <width>1920</width>
+                <height>500</height>
+                <aspectratio aligny="bottom">keep</aspectratio>
+                <texture>$VAR[ShelfLogo]</texture>
+            </control>
+        </control>
+        <control type="group" description="RSS">
+            <control type="rss" description="RSS Feed">
+                <visible>system.getbool(lookandfeel.enablerssfeeds)</visible>
+                <visible>!Skin.HasSetting(NORSS)</visible>
+                <include>VisibleFade</include>
+                <left>0</left>
+                <top>5</top>
+                <width>1920</width>
+                <height>33</height>
+                <font>size22</font>
+                <urlset>1</urlset>
+                <shadowcolor>-</shadowcolor>
+                <titlecolor>grey</titlecolor>
+                <headlinecolor>grey</headlinecolor>
+                <textcolor>grey</textcolor>
+            </control>
+        </control>
+        <control type="group" description="Player Info">
+            <visible>Player.HasAudio</visible>
+			<left>1500</left>
+            <top>440</top>
+			<control type="image" description="Playing BG">
+                <width>430</width>
+                <height>105</height>
+                <texture>homebar.png</texture>
+            </control>
+            <control type="group">
+                <control type="image">
+                    <left>18</left>
+                    <top>15</top>
+                    <width>75</width>
+                    <height>75</height>
+                    <texture>$INFO[MusicPlayer.Cover]</texture>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="label">
+                    <left>110</left>
+                    <top>9</top>
+                    <aligny>center</aligny>
+                    <width>300</width>
+                    <height>36</height>
+                    <font>size24</font>
+                    
+                    <label>$INFO[MusicPlayer.Title]</label>
+                </control>
+                <control type="label">
+                    <left>110</left>
+                    <top>36</top>
+                    <aligny>center</aligny>
+                    <width>300</width>
+                    <height>36</height>
+                    <font>size21</font>
+                    <label>$INFO[MusicPlayer.Artist]</label>
+                </control>
+                <control type="label">
+                    <left>110</left>
+                    <top>60</top>
+                    <aligny>center</aligny>
+                    <width>300</width>
+                    <height>36</height>
+                    <font>size21</font>
+                    <label>$INFO[MusicPlayer.Album]</label>
+                </control>
+            </control>
+        </control>
+        <control type="label" description="Top Label">
+            <include>ShelfFade</include>
+            <include>ShelfTitle</include>
+            <label>$VAR[shelflabel]</label>
+        </control>
+		
+
+
+<!--         <control type="button" id="9009">
+            <visible>Control.HasFocus(9009) | Control.HasFocus(90000)</visible>
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <texturefocus aspectratio="keep">special://skin/icons/headbar.png</texturefocus>
+            <onup>noop</onup>
+            <ondown condition="Control.IsVisible(311)">311</ondown>
+            <ondown condition="Control.IsVisible(312)">312</ondown>
+            <onleft>90000</onleft>
+            <onright>noop</onright>
+        </control> -->
+	
+		
+		
+				<control id="9009" type="button">
+					<visible>Container(9000).Row(0) | Container(9000).HasPrevious()</visible>
+					
+					<top>40</top>
+					<left>550</left>
+					<width>250</width>
+					<height>45</height>
+					<font>size24</font>
+					<align>center</align>
+					<label>Search</label>
+					<textcolor>dimgray</textcolor>
+					
+					<focusedcolor>whitesmoke</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>$INFO[Skin.String(CustomMyTvSearch.Action)]</onclick>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<onup>9000</onup>
+					<onleft>9009</onleft>
+					<onright>90000</onright>
+				</control>			
+				<control id="90000" type="button">
+					<visible>Container(9000).Row(0) | Container(9000).HasPrevious()</visible>
+					<top>40</top>
+					<left>750</left>
+					<width>250</width>
+					<height>45</height>
+					<font>size24</font>
+					<align>center</align>
+					<label>Apps</label>
+					<textcolor>dimgray</textcolor>
+					
+					<focusedcolor>whitesmoke</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>ActivateWindow(AddonBrowser)</onclick>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<onleft>9009</onleft>
+					<onright>90001</onright>
+				</control>		
+				<control id="90001" type="button">
+					<visible>Container(9000).Row(0) | Container(9000).HasPrevious()</visible>
+					<top>40</top>
+					<left>950</left>
+					<width>250</width>
+					<height>45</height>
+					<font>size24</font>
+					<align>center</align>
+					<label>Settings</label>
+					<textcolor>dimgray</textcolor>
+					
+					<focusedcolor>whitesmoke</focusedcolor>
+					<texturefocus>-</texturefocus>
+					<texturenofocus>-</texturenofocus>
+					<onclick>ActivateWindow(Settings)</onclick>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<onleft>90000</onleft>
+					
+				</control>	
+				<control type="label" description="Clock">		
+					<visible>Container(9000).Row(0) | Container(9000).HasPrevious()</visible>
+					<top>40</top>
+					<left>1400</left>
+					<width>550</width>
+					<height>45</height>
+					<font>size24</font>
+					<align>center</align>
+					<textcolor>dimgray</textcolor>
+					
+					<label>$INFO[System.Date] • $INFO[System.Time]</label>
+				</control>									
+			
+		  </control>		
+    </controls>
+</window>

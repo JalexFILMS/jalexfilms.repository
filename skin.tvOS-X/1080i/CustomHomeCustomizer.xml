@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1117">
+    <defaultcontrol always="true">50</defaultcontrol>
+    <include>OpenClose</include>
+    <controls>
+        <include>Background</include>
+        <control type="label" description="Heading">
+            <right>60</right>
+            <top>40</top>
+            <width>720</width>
+            <height>55</height>
+            <font>size42B</font>
+            <align>right</align>
+            <textcolor>textcolor2</textcolor>
+            <label>31052</label>
+        </control>
+        <control type="group">
+            <!--control type="image" description="Line bottom">
+                <top>490</top>
+                <width>1920</width>
+                <height>1</height>
+                <texture>images/Line1.png</texture>
+            </control-->
+            <control type="group">
+                <control type="panel" id="50">
+					<animation condition="!Container(50).Row(0) | Container(50).HasPrevious()" effect="slide" start="0,0" end="0,-590" time="220">Conditonal</animation>
+					<centerleft>960</centerleft>
+					<top>710</top>
+					<width>1800</width>
+					<height>1060</height>
+					<onleft>50</onleft>
+					<onright>50</onright>
+					<onup>520</onup>
+					<ondown>noop</ondown>
+					<orientation>vertical</orientation>
+					<scrolltime tween="sine" easing="inout">280</scrolltime>
+					<itemlayout height="290" width="360">
+						<control type="image" description="shade_base">
+							<centerleft>180</centerleft>
+							<width>360</width>
+							<height>250</height>
+							<texture>icons/iconbase.png</texture>
+						</control>						
+						<control type="image" description="color base">
+							<centerleft>180</centerleft>
+							<top>27</top>
+							<width>287</width>
+							<height>179</height>
+							<texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.Property(color)]</texture>
+						</control>
+						<control type="image" description="THMBSICONS">
+							<visible>!IsEmpty(Listitem.thumb)</visible>
+							<centerleft>180</centerleft>
+							<top>27</top>
+							<width>287</width>
+							<height>179</height>
+							<texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.thumb]</texture>
+						</control>
+						<control type="image" description="THMBSICONS">
+							<visible>IsEmpty(Listitem.thumb)</visible>
+							<centerleft>180</centerleft>
+							<top>27</top>
+							<width>287</width>
+							<height>179</height>
+							<texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.label2]</texture>
+						</control>
+						<control type="image" description="THMBS weather">
+							<centerleft>180</centerleft>
+							<top>27</top>
+							<width>287</width>
+							<height>179</height>
+							<texture>$INFO[ListItem.Property(weatherthumb)]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>				
+						<control type="label" description="label">
+							<!--animation effect="fade" start="0" end="100" time="150" delay="50">Focus</animation-->
+							<animation effect="fade" start="100" end="0" time="100">unFocus</animation>				
+							<centerleft>180</centerleft>
+							<top>234</top>
+							<width>350</width>
+							<height>24</height>
+							<font>size27</font>
+							<align>center</align>
+							<scroll>false</scroll>
+							<textcolor>textcolor3</textcolor>
+							<label>$INFO[ListItem.label]</label>
+						</control>				
+					</itemlayout>
+					<focusedlayout height="290" width="360">
+						<control type="group">
+							<animation effect="zoom" start="100" end="130" time="120" center="auto" tween="Back" easing="Out">Focus</animation>
+							<animation effect="zoom" start="130" end="100" time="120" center="auto">unFocus</animation>
+							<control type="image" description="shade_base">
+								<centerleft>180</centerleft>
+								<width>360</width>
+								<height>250</height>
+								<texture>icons/iconbase.png</texture>
+							</control>														
+							<control type="image" description="color base">
+								<centerleft>180</centerleft>
+								<top>27</top>
+								<width>287</width>
+								<height>179</height>
+								<texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.Property(color)]</texture>
+							</control>
+							<control type="image" description="THMBSICONS">
+								<visible>!IsEmpty(Listitem.thumb)</visible>
+								<centerleft>180</centerleft>
+								<top>27</top>
+								<width>287</width>
+								<height>179</height>
+								<texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.thumb]</texture>
+							</control>
+							<control type="image" description="THMBSICONS">
+								<visible>IsEmpty(Listitem.thumb)</visible>
+								<centerleft>180</centerleft>
+								<top>27</top>
+								<width>287</width>
+								<height>179</height>
+								<texture diffuse="icons/diffusehomeicon.png">$INFO[ListItem.label2]</texture>
+							</control>
+							<control type="image" description="THMBS weather">
+								<centerleft>180</centerleft>
+								<top>27</top>
+								<width>287</width>
+								<height>179</height>
+								<texture>$INFO[ListItem.Property(weatherthumb)]</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
+						</control>
+						<control type="label" description="label">
+							<animation effect="fade" start="0" end="100" time="150" delay="50">Focus</animation>
+							<animation effect="fade" start="100" end="0" time="100">unFocus</animation>
+							<centerleft>180</centerleft>
+							<top>234</top>
+							<width>368</width>
+							<height>24</height>
+							<font>size27</font>
+							<align>center</align>
+							<scroll>true</scroll>
+							<textcolor>textcolor4</textcolor>
+							<label>[B]$INFO[ListItem.label][/B]</label>
+						</control>
+					</focusedlayout>
+                    <content>
+                        <item id="601" description="ShelfHomeFav1">
+                            
+                            <label>$INFO[Skin.String(ShelfMyTvList1.Label)]</label>
+                            <label2>$INFO[Skin.String(CustomMyTvWidgetName1)]</label2>
+                            <thumb>$INFO[Skin.String(ShelfMyTvList1.Thumb)]</thumb>
+							<property name="color">icons/red.png</property>
+                            <onclick>SetFocus(9000)</onclick>
+                        </item>
+                        <item id="602" description="ShelfHomeFav2">
+                            
+                            <label>$INFO[Skin.String(ShelfMyTvList2.Label)]</label>
+                            <label2>$INFO[Skin.String(CustomMyTvWidgetName2)]</label2>
+                            <thumb>$INFO[Skin.String(ShelfMyTvList2.Thumb)]</thumb>
+							<property name="color">icons/red.png</property>
+                            <onclick>SetFocus(9000)</onclick>
+                        </item>
+                        <item id="603" description="ShelfHomeFav3">
+                            
+                            <label>$INFO[Skin.String(ShelfMyTvList3.Label)]</label>
+                            <label2>$INFO[Skin.String(CustomMyTvWidgetName3)]</label2>
+                            <thumb>$INFO[Skin.String(ShelfMyTvList3.Thumb)]</thumb>
+							<property name="color">icons/red.png</property>
+                            <onclick>SetFocus(9000)</onclick>
+                        </item>
+                        <item id="604" description="ShelfHomeFav4">
+                            
+                            <label>$INFO[Skin.String(ShelfMyTvList4.Label)]</label>
+                            <label2>$INFO[Skin.String(CustomMyTvWidgetName4)]</label2>
+                            <thumb>$INFO[Skin.String(ShelfMyTvList4.Thumb)]</thumb>
+							<property name="color">icons/red.png</property>
+                            <onclick>SetFocus(9000)</onclick>
+                        </item>
+                        <item id="605" description="ShelfHomeFav5">
+                            
+                            <label>$INFO[Skin.String(ShelfMyTvList5.Label)]</label>
+                            <label2>$INFO[Skin.String(CustomMyTvWidgetName5)]</label2>
+                            <thumb>$INFO[Skin.String(ShelfMyTvList5.Thumb)]</thumb>
+							<property name="color">icons/red.png</property>
+                            <onclick>SetFocus(9000)</onclick>
+                        </item>
+
+						<item id="6050" description="Addons">
+                            
+                            <thumb>special://skin/icons/addons.png</thumb>
+                            <label>$LOCALIZE[24001]</label>
+                            
+                        </item>
+ 
+<!--  						<item id="6050" description="Addons">
+                           <thumb>special://skin/icons/addons.png</thumb>
+                            <label>$LOCALIZE[24001]</label>
+                            <onclick>Skin.ToggleSetting(hideaddon)</onclick>
+							<visible>!Skin.HasSetting(hideaddon)</visible>
+                        </item> -->
+ 										
+
+                <item id="340">
+                    <visible>!Skin.HasSetting(hidemovie)</visible>
+                    <label>342</label>
+                    <thumb>special://skin/icons/movies.png</thumb>
+                    <onclick>Skin.ToggleSetting(hidemovie)</onclick>
+               </item>
+                <item id="340">
+                    <visible>Skin.HasSetting(hidemovie)</visible>
+                    <label>342</label>
+                    
+                    <onclick>Skin.ToggleSetting(hidemovie)</onclick>
+					<thumb>icons/off.png</thumb>
+					<thumb>special://skin/icons/movies.png</thumb>
+                </item>
+                <item id="341">
+                    <visible>!Skin.HasSetting(hidetv)</visible>
+                    <label>20343</label>
+                    <thumb>special://skin/icons/tvshows.png</thumb>
+                    <onclick>Skin.ToggleSetting(hidetv)</onclick>
+                </item>					
+                <item id="341">
+                   <onclick>Skin.ToggleSetting(hidetv)</onclick>
+					<thumb>icons/off.png</thumb>
+					<visible>Skin.HasSetting(hidetv)</visible>
+                    <label>20343</label>
+                    <thumb>special://skin/icons/tvshows.png</thumb>
+
+                </item>
+                <item id="352">
+                    <visible>!Skin.HasSetting(hidefav)</visible>
+                    <thumb>special://skin/icons/favs.png</thumb>
+                    <label>$LOCALIZE[1036]</label>
+                    <property name="color">icons/red.png</property>
+                     <onclick>Skin.ToggleSetting(hidefav)</onclick>
+					 
+                </item>	
+                <item id="352">
+                    <visible>Skin.HasSetting(hidefav)</visible>
+					<thumb>icons/off.png</thumb>
+                    <thumb>special://skin/icons/favs.png</thumb>
+                    <label>$LOCALIZE[1036]</label>
+                    <property name="color">icons/red.png</property>
+                     <onclick>Skin.ToggleSetting(hidefav)</onclick>
+					 
+                </item>
+				
+                <item id="345">
+                    <visible>!Skin.HasSetting(hideyoutube)</visible>
+                    <label>Youtube</label>
+                    <thumb>special://skin/icons/youtube.png</thumb>
+                    <onclick>Skin.ToggleSetting(hideyoutube)</onclick>
+                </item>
+                <item id="345">
+                    <visible>Skin.HasSetting(hideyoutube)</visible>
+                    <label>Youtube</label>
+					<thumb>icons/off.png</thumb>
+                    <thumb>special://skin/icons/youtube.png</thumb>
+                     <onclick>Skin.ToggleSetting(hideyoutube)</onclick>
+                </item>
+				
+				
+                <item id="3000">
+                    <visible>!Skin.HasSetting(hidevimeo)</visible>
+                    <label>Vimeo</label>
+                    <thumb>special://skin/icons/vimeo.png</thumb>
+                    <onclick>Skin.ToggleSetting(hidevimeo)</onclick>
+                </item>
+                <item id="3000">
+                    <visible>Skin.HasSetting(hidevimeo)</visible>
+                    <label>Vimeo</label>
+					<thumb>icons/off.png</thumb>
+                    <thumb>special://skin/icons/vimeo.png</thumb>
+                   <onclick>Skin.ToggleSetting(hidevimeo)</onclick>
+                </item>
+				
+                <item id="3001">
+                    <visible>!Skin.HasSetting(hidetwitch)</visible>
+                    <label>Twitch</label>
+                    <thumb>special://skin/icons/twitch.png</thumb>
+                    <onclick>Skin.ToggleSetting(hidetwitch)</onclick>
+                </item>	
+                <item id="3001">
+                    <visible>Skin.HasSetting(hidetwitch)</visible>
+                    <label>Twitch</label>
+					<thumb>icons/off.png</thumb>
+                    <thumb>special://skin/icons/twitch.png</thumb>
+                    <onclick>Skin.ToggleSetting(hidetwitch)</onclick>
+                </item>	
+                <item id="3002">
+                    <visible>!Skin.HasSetting(hideted)</visible>
+                    <label>Ted Talks</label>
+                    <thumb>special://skin/icons/ted.png</thumb>
+                     <onclick>Skin.ToggleSetting(hideted)</onclick>
+                </item>								
+                <item id="3002">
+                    <visible>Skin.HasSetting(hideted)</visible>
+                    <label>Ted Talks</label>
+					<thumb>icons/off.png</thumb>
+                    <thumb>special://skin/icons/ted.png</thumb>
+                     <onclick>Skin.ToggleSetting(hideted)</onclick>
+                </item>					
+	
+				
+				<item id="3003">
+                    <visible>!Skin.HasSetting(hidewtr)</visible>
+                   
+                    <label>Weather</label>
+                    <property name="color">images/White.png</property>
+                     <onclick>Skin.ToggleSetting(hidewtr)</onclick>
+                </item>
+                <item id="3003">
+                    <visible>Skin.HasSetting(hidewtr)</visible>
+                   <thumb>icons/off.png</thumb>
+                    <label>Weather</label>
+                    <property name="color">images/White.png</property>
+                     <onclick>Skin.ToggleSetting(hidewtr)</onclick>
+                </item>
+										
+										
+										
+										
+ 
+                     </content>
+                </control>				
+				<control type="group" description="Click to Add Favourite">
+					<visible>[Container(50).HasFocus(601) + IsEmpty(Skin.String(HomeFav.1.Label))] | [Container(50).HasFocus(602) + IsEmpty(Skin.String(HomeFav.2.Label))] | [Container(50).HasFocus(603) + IsEmpty(Skin.String(HomeFav.3.Label))] | [Container(50).HasFocus(604) + IsEmpty(Skin.String(HomeFav.4.Label))] | [Container(50).HasFocus(605) + IsEmpty(Skin.String(HomeFav.5.Label))] | [Container(50).HasFocus(606) + IsEmpty(Skin.String(HomeFav.6.Label))] | [Container(50).HasFocus(607) + IsEmpty(Skin.String(HomeFav.7.Label))] | [Container(50).HasFocus(608) + IsEmpty(Skin.String(HomeFav.8.Label))] | [Container(50).HasFocus(609) + IsEmpty(Skin.String(HomeFav.9.Label))] | [Container(50).HasFocus(610) + IsEmpty(Skin.String(HomeFav.10.Label))] | [Container(50).HasFocus(611) + IsEmpty(Skin.String(HomeFav.11.Label))] | [Container(50).HasFocus(612) + IsEmpty(Skin.String(HomeFav.12.Label))]</visible>
+					<top>30</top>
+					<left>80</left>
+					<control type="label">
+						<top>40</top>
+						<left>20</left>
+						<width>1000</width>
+						<textcolor>textcolor2</textcolor>
+						<font>Size24</font>
+						<align>left</align>
+						<label>31034</label>
+					</control>
+				</control>
+				<control type="group" description="Click to Add Add-on">
+					<visible>[Container(50).HasFocus(401) + IsEmpty(Skin.String(HomeAddon.1.Label))] | [Container(50).HasFocus(402) + IsEmpty(Skin.String(HomeAddon.2.Label))] | [Container(50).HasFocus(403) + IsEmpty(Skin.String(HomeAddon.3.Label))] | [Container(50).HasFocus(404) + IsEmpty(Skin.String(HomeAddon.4.Label))] | [Container(50).HasFocus(405) + IsEmpty(Skin.String(HomeAddon.5.Label))] | [Container(50).HasFocus(406) + IsEmpty(Skin.String(HomeAddon.6.Label))] | [Container(50).HasFocus(407) + IsEmpty(Skin.String(HomeAddon.7.Label))] | [Container(50).HasFocus(408) + IsEmpty(Skin.String(HomeAddon.8.Label))] | [Container(50).HasFocus(409) + IsEmpty(Skin.String(HomeAddon.9.Label))] | [Container(50).HasFocus(410) + IsEmpty(Skin.String(HomeAddon.10.Label))] | [Container(50).HasFocus(411) + IsEmpty(Skin.String(HomeAddon.11.Label))] | [Container(50).HasFocus(412) + IsEmpty(Skin.String(HomeAddon.12.Label))]</visible>
+					<top>30</top>
+					<left>80</left>
+					<control type="label">
+						<top>40</top>
+						<left>20</left>
+						<width>1000</width>
+						<textcolor>textcolor2</textcolor>
+						<font>Size24</font>
+						<align>left</align>
+						<label>31081</label>
+					</control>
+				</control>				
+				<control type="group" description="Click to Pick Icon">
+					<visible>[Container(50).HasFocus(601) + !IsEmpty(Skin.String(HomeFav.1.Label))] | [Container(50).HasFocus(602) + !IsEmpty(Skin.String(HomeFav.2.Label))] | [Container(50).HasFocus(603) + !IsEmpty(Skin.String(HomeFav.3.Label))] | [Container(50).HasFocus(604) + !IsEmpty(Skin.String(HomeFav.4.Label))] | [Container(50).HasFocus(605) + !IsEmpty(Skin.String(HomeFav.5.Label))] | [Container(50).HasFocus(606) + !IsEmpty(Skin.String(HomeFav.6.Label))] | [Container(50).HasFocus(607) + !IsEmpty(Skin.String(HomeFav.7.Label))] | [Container(50).HasFocus(608) + !IsEmpty(Skin.String(HomeFav.8.Label))] | [Container(50).HasFocus(609) + !IsEmpty(Skin.String(HomeFav.9.Label))] | [Container(50).HasFocus(610) + !IsEmpty(Skin.String(HomeFav.10.Label))] | [Container(50).HasFocus(611) + !IsEmpty(Skin.String(HomeFav.11.Label))] | [Container(50).HasFocus(612) + !IsEmpty(Skin.String(HomeFav.12.Label))] | [Container(50).HasFocus(401) + !IsEmpty(Skin.String(HomeAddon.1.Label))] | [Container(50).HasFocus(402) + !IsEmpty(Skin.String(HomeAddon.2.Label))] | [Container(50).HasFocus(403) + !IsEmpty(Skin.String(HomeAddon.3.Label))] | [Container(50).HasFocus(404) + !IsEmpty(Skin.String(HomeAddon.4.Label))] | [Container(50).HasFocus(405) + !IsEmpty(Skin.String(HomeAddon.5.Label))] | [Container(50).HasFocus(406) + !IsEmpty(Skin.String(HomeAddon.6.Label))] | [Container(50).HasFocus(407) + !IsEmpty(Skin.String(HomeAddon.7.Label))] | [Container(50).HasFocus(408) + !IsEmpty(Skin.String(HomeAddon.8.Label))] | [Container(50).HasFocus(409) + !IsEmpty(Skin.String(HomeAddon.9.Label))] | [Container(50).HasFocus(410) + !IsEmpty(Skin.String(HomeAddon.10.Label))] | [Container(50).HasFocus(411) + !IsEmpty(Skin.String(HomeAddon.11.Label))] | [Container(50).HasFocus(412) + !IsEmpty(Skin.String(HomeAddon.12.Label))]</visible>
+					<top>30</top>
+					<left>80</left>
+					<control type="label">
+						<top>40</top>
+						<left>20</left>
+						<width>1000</width>
+						<textcolor>textcolor2</textcolor>
+						<font>Size24</font>
+						<align>left</align>
+						<label>31035</label>
+					</control>
+				</control>							
+            </control>
+        </control>
+
+        <control type="group" description="All dialog content">
+            <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+            <control type="image">
+                <left>444</left>
+                <top>155</top>
+                <width>1023</width>
+                <height>662</height>
+                <texture border="150">images/Dialog.png</texture>
+            </control>
+            <control type="label" description="Dialog heading">
+                <left>615</left>
+                <top>321</top>
+                <width>690</width>
+                <height>52</height>
+                <label>[B]$LOCALIZE[31029] $LOCALIZE[33063][/B]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <font>size36</font>
+                <textcolor>White</textcolor>
+                <shadowcolor>Black</shadowcolor>
+            </control>
+            <control type="group">
+                <left>442</left>
+                <top>296</top>
+                <control type="grouplist" id="9000">
+                    <left>255</left>
+                    <top>150</top>
+                    <width>525</width>
+                    <height>450</height>
+                    <onleft>50</onleft>
+                    <onright>50</onright>
+                    <onup>9000</onup>
+                    <ondown>9000</ondown>
+                    <itemgap>0</itemgap>
+                    <font>size33</font>
+                    <scrolltime>260</scrolltime>
+                    <defaultcontrol always="true">701</defaultcontrol>
+                    <control type="button" id="666">
+                        <left>700</left>
+                        <top>140</top>
+                        <width>520</width>
+                        <height>60</height>
+                        <label>Set Icon</label>
+                        <!--special://skin/icons-->
+                        <onclick condition="Container(50).Hasfocus(601)">Skin.SetImage(ShelfMyTvList1.Thumb,,special://skin/icons)</onclick>
+                        <onclick condition="Container(50).Hasfocus(602)">Skin.SetImage(ShelfMyTvList2.Thumb,,special://skin/icons)</onclick>
+                        <onclick condition="Container(50).Hasfocus(603)">Skin.SetImage(ShelfMyTvList3.Thumb,,special://skin/icons)</onclick>
+                        <onclick condition="Container(50).Hasfocus(604)">Skin.SetImage(ShelfMyTvList4.Thumb,,special://skin/icons)</onclick>
+                        <onclick condition="Container(50).Hasfocus(605)">Skin.SetImage(ShelfMyTvList5.Thumb,,special://skin/icons)</onclick>
+					
+                        <onclick>SetFocus(50)</onclick>
+                    </control>
+                    <control type="button" id="667">
+                        <left>700</left>
+                        <top>200</top>
+                        <width>520</width>
+                        <height>60</height>
+                        <label>Set Item</label>
+                        <onclick condition="Container(50).Hasfocus(601)">RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList1.Label&amp;skinAction=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList1.Action&amp;skinList=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList1.List&amp;skinType=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList1.Type&amp;skinThumbnail=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList1.Thumb)</onclick>
+                        <onclick condition="Container(50).Hasfocus(602)">RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList2.Label&amp;skinAction=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList2.Action&amp;skinList=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList2.List&amp;skinType=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList2.Type&amp;skinThumbnail=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList2.Thumb)</onclick>
+                        <onclick condition="Container(50).Hasfocus(603)">RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList3.Label&amp;skinAction=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList3.Action&amp;skinList=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList3.List&amp;skinType=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList3.Type&amp;skinThumbnail=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList3.Thumb)</onclick>
+                        <onclick condition="Container(50).Hasfocus(604)">RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList4.Label&amp;skinAction=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList4.Action&amp;skinList=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList4.List&amp;skinType=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList4.Type&amp;skinThumbnail=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList4.Thumb)</onclick>
+                        <onclick condition="Container(50).Hasfocus(605)">RunScript(script.skinshortcuts,type=shortcuts&amp;showNone=True&amp;skinLabel=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList5.Label&amp;skinAction=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList5.Action&amp;skinList=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList5.List&amp;skinType=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList5.Type&amp;skinThumbnail=$INFO[Window(home).Property(SubMenu)]ShelfMyTvList5.Thumb)</onclick>
+				
+						<onclick>SetFocus(50)</onclick>
+                    </control>
+                    <control type="button" id="6000">
+                        <left>700</left>
+                        <top>200</top>
+                        <width>520</width>
+                        <height>60</height>
+                        <label>Set Widget</label>
+						
+
+                        <onclick condition="Container(50).Hasfocus(601)">RunScript(script.skinshortcuts,type=widgets&amp;showNone=True&amp;skinWidgetName=CustomMyTvWidgetName1&amp;skinWidgetTarget=CustomMyTvWidgetTarget1&amp;skinWidgetPath=CustomMyTvWidgetPath1)</onclick>
+                        <onclick condition="Container(50).Hasfocus(602)">RunScript(script.skinshortcuts,type=widgets&amp;showNone=True&amp;skinWidgetName=CustomMyTvWidgetName2&amp;skinWidgetTarget=CustomMyTvWidgetTarget2&amp;skinWidgetPath=CustomMyTvWidgetPath2)</onclick>
+                        <onclick condition="Container(50).Hasfocus(603)">RunScript(script.skinshortcuts,type=widgets&amp;showNone=True&amp;skinWidgetName=CustomMyTvWidgetName3&amp;skinWidgetTarget=CustomMyTvWidgetTarget3&amp;skinWidgetPath=CustomMyTvWidgetPath3)</onclick>
+                        <onclick condition="Container(50).Hasfocus(604)">RunScript(script.skinshortcuts,type=widgets&amp;showNone=True&amp;skinWidgetName=CustomMyTvWidgetName4&amp;skinWidgetTarget=CustomMyTvWidgetTarget4&amp;skinWidgetPath=CustomMyTvWidgetPath4)</onclick>
+                        <onclick condition="Container(50).Hasfocus(605)">RunScript(script.skinshortcuts,type=widgets&amp;showNone=True&amp;skinWidgetName=CustomMyTvWidgetName5&amp;skinWidgetTarget=CustomMyTvWidgetTarget5&amp;skinWidgetPath=CustomMyTvWidgetPath5)</onclick>
+ 
+
+
+
+
+					<onclick>SetFocus(50)</onclick>
+                    </control>
+					
+					
+					
+					
+					
+                </control>
+            </control>
+        </control>
+        <!--control type="group" id="520" description="WEATHER">
+            <top>60</top>
+            <left>60</left>
+            <visible>Container(50).HasFocus(1006)</visible>
+            <control type="label">
+                <left>450</left>
+                <top>80</top>
+                <width>900</width>
+                <height>60</height>
+                <align>center</align>
+                <textcolor>Grey</textcolor>
+                <font>Size26</font>
+                <label>$LOCALIZE[35500]:</label>
+            </control>
+            <control type="label">
+                <left>450</left>
+                <top>150</top>
+                <width>900</width>
+                <height>60</height>
+                <align>center</align>
+                <font>Size60B</font>
+				<textcolor>textcolor4</textcolor>
+                <label>$INFO[Weather.Location]</label>
+            </control>
+            <control type="button" id="100">
+                <ondown>50</ondown>
+                <left>750</left>
+                <top>250</top>
+                <width>300</width>
+                <height>60</height>
+                <align>center</align>
+                <label>5</label>
+                <enable>!Skin.HasSetting(hidewtr)</enable>
+                <onclick>activatewindow(weathersettings)</onclick>
+            </control>
+        </control>
+        <control type="group" id="521" description="WEATHER">
+            <top>60</top>
+            <left>60</left>
+            <visible>Container(50).HasFocus(356)</visible>
+            <control type="textbox">
+                <left>450</left>
+                <top>100</top>
+                <width>900</width>
+                <height>300</height>
+                <align>center</align>
+                <textcolor>Grey2</textcolor>
+                <font>Size26</font>
+                <label>$LOCALIZE[31061]</label>
+            </control>
+        </control-->
+    </controls>
+</window>

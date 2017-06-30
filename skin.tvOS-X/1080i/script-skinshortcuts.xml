@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+
+	<defaultcontrol always="true">300</defaultcontrol>
+
+	<controls>
+            <control type="image" description="Home Background">
+				<!-- <animation condition="[!Container(9000).Row(0) | Container(9000).HasPrevious()] + !Skin.HasTheme(White)" effect="slide" start="0,0" end="0,-590" time="220">Conditonal</animation>		 -->	
+				<visible>IsEmpty(Skin.String(CustomBgHome))</visible>
+                <width>1920</width>
+                <height>1080</height>
+                <aspectratio>stretch</aspectratio>
+                <texture background="true">$VAR[HomeBG]</texture>
+            </control>			
+		<control type="group">
+		<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
+	    <animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+		
+	
+			<control type="image">
+				<left>-20</left>
+				<top>-10</top>
+				<width>1320</width>
+				<height>800</height>
+				<texture border="15">ContentPanel.png</texture>
+				
+			</control>
+			<control type="image">
+				<left>-20</left>
+				<top>-10</top>
+				<width>1320</width>
+				<height>800</height>
+				<texture border="15">ContentPanel.png</texture>
+			</control>
+		</control>			
+		<!--all content-->
+		<control type="group">
+			<left>-265</left>
+			<visible>!Window.IsActive(FileBrowser) + !Window.IsActive(SelectDialog) + !Window.IsVisible(YesNoDialog) + IsEmpty(Window.Property(additionalDialog))</visible>
+			<animation effect="fade" start="0" end="100" time="500">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="500">WindowClose</animation>
+			
+			<!--title bars and backgrounds-->
+			<control type="group">
+			
+
+				
+
+				
+			</control>
+			
+			<!--main content-->
+			<control type="group">
+				<left>250</left>
+				<top>0</top>
+				
+				<!--title-->
+				<control type="label" id="500">
+					<left>45</left>
+					<top>25</top>
+					<width>1330</width>
+					<height>60</height>
+					<font>info.title</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<label>-</label>
+				</control>
+			
+				<control type="group">
+					<left>10</left>
+					<top>120</top>
+					
+					<!--shortcuts-->
+					<control type="list" id="211">
+						<width>585</width>
+						<height>900</height>
+						<itemgap>5</itemgap>
+						<pagecontrol>31</pagecontrol>
+						<onleft>304</onleft>
+						<onright>300</onright>
+						<onup>211</onup>
+						
+						
+						<itemlayout width="585" height="60">
+                    <control type="image">
+                        <right>60</right>
+                        <top>0</top>
+                        <width>66</width>
+                        <height>66</height>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        
+                        
+                    </control>						
+							<control type="label">
+								<top>-5</top>
+								<left>120</left>
+								<width>300</width>
+								<aligny>center</aligny>
+								<textcolor>grey</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							
+						</itemlayout>
+						
+						<focusedlayout width="585" height="60">
+							<control type="image">
+								<right>60</right>
+								<top>0</top>
+								<width>66</width>
+								<height>66</height>
+								<texture>$INFO[ListItem.Icon]</texture>
+								
+								
+							</control>							
+							<control type="image">
+								<left>110</left>
+								<height>50</height>
+								<width>320</width>
+								<texture>button-focus.png</texture>
+								<animation effect="fade" start="100" end="30" time="100" condition="![Control.HasFocus(211) | Control.HasFocus(302) | Control.HasFocus(303) | Control.HasFocus(304)]">Conditional</animation>
+							</control>
+
+							<control type="label">
+							    <top>-5</top>
+								<left>120</left>
+								<width>300</width>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+								<textcolor>white</textcolor>
+							</control>
+							
+						</focusedlayout>
+						
+					</control>
+					
+					<!--inline controls-->
+					<control type="group" id="1000">
+						<animation effect="slide" end="0,60" time="0" condition="Container(211).Row(1)">Conditional</animation>
+						<animation effect="slide" end="0,120" time="0" condition="Container(211).Row(2)">Conditional</animation>
+						<animation effect="slide" end="0,180" time="0" condition="Container(211).Row(3)">Conditional</animation>
+						<animation effect="slide" end="0,240" time="0" condition="Container(211).Row(4)">Conditional</animation>
+						<animation effect="slide" end="0,300" time="0" condition="Container(211).Row(5)">Conditional</animation>
+						<animation effect="slide" end="0,360" time="0" condition="Container(211).Row(6)">Conditional</animation>
+						<animation effect="slide" end="0,420" time="0" condition="Container(211).Row(7)">Conditional</animation>
+						<animation effect="slide" end="0,480" time="0" condition="Container(211).Row(8)">Conditional</animation>
+						<animation effect="slide" end="0,540" time="0" condition="Container(211).Row(9)">Conditional</animation>
+						<animation effect="slide" end="0,600" time="0" condition="Container(211).Row(10)">Conditional</animation>
+						<animation effect="slide" end="0,660" time="0" condition="Container(211).Row(11)">Conditional</animation>
+						<animation effect="slide" end="0,720" time="0" condition="Container(211).Row(12)">Conditional</animation>
+						<animation effect="slide" end="0,780" time="0" condition="Container(211).Row(13)">Conditional</animation>
+						<animation effect="slide" end="0,840" time="0" condition="Container(211).Row(14)">Conditional</animation>
+						<animation effect="slide" end="0,900" time="0" condition="Container(211).Row(15)">Conditional</animation>
+						<animation effect="slide" end="0,960" time="0" condition="Container(211).Row(16)">Conditional</animation>
+						<animation effect="slide" end="0,1020" time="0" condition="Container(211).Row(17)">Conditional</animation>
+						<animation effect="slide" end="0,1080" time="0" condition="Container(211).Row(18)">Conditional</animation>
+						<animation effect="slide" end="0,1140" time="0" condition="Container(211).Row(19)">Conditional</animation>
+						<animation effect="slide" end="0,1200" time="0" condition="Container(211).Row(20)">Conditional</animation>
+
+						<animation effect="slide" end="0,1260" time="0" condition="Container(211).Row(21)">Conditional</animation>
+						<animation effect="slide" end="0,1320" time="0" condition="Container(211).Row(22)">Conditional</animation>
+						<animation effect="slide" end="0,1380" time="0" condition="Container(211).Row(23)">Conditional</animation>
+						<animation effect="slide" end="0,1440" time="0" condition="Container(211).Row(24)">Conditional</animation>
+						<animation effect="slide" end="0,1500" time="0" condition="Container(211).Row(25)">Conditional</animation>
+						<animation effect="slide" end="0,1560" time="0" condition="Container(211).Row(26)">Conditional</animation>
+						<animation effect="slide" end="0,1620" time="0" condition="Container(211).Row(27)">Conditional</animation>
+						<animation effect="slide" end="0,1680" time="0" condition="Container(211).Row(28)">Conditional</animation>
+						<animation effect="slide" end="0,1740" time="0" condition="Container(211).Row(29)">Conditional</animation>
+						<animation effect="slide" end="0,1800" time="0" condition="Container(211).Row(30)">Conditional</animation>
+						<animation effect="slide" end="0,1860" time="0" condition="Container(211).Row(31)">Conditional</animation>
+						<animation effect="slide" end="0,1920" time="0" condition="Container(211).Row(32)">Conditional</animation>
+						<animation effect="slide" end="0,1980" time="0" condition="Container(211).Row(33)">Conditional</animation>
+						<animation effect="slide" end="0,2040" time="0" condition="Container(211).Row(34)">Conditional</animation>
+						<animation effect="slide" end="0,2100" time="0" condition="Container(211).Row(35)">Conditional</animation>
+						<animation effect="slide" end="0,2160" time="0" condition="Container(211).Row(36)">Conditional</animation>
+						<animation effect="slide" end="0,2220" time="0" condition="Container(211).Row(37)">Conditional</animation>
+						<animation effect="slide" end="0,2280" time="0" condition="Container(211).Row(38)">Conditional</animation>
+						<animation effect="slide" end="0,2340" time="0" condition="Container(211).Row(39)">Conditional</animation>
+						<animation effect="slide" end="0,2400" time="0" condition="Container(211).Row(40)">Conditional</animation>
+
+						<!--move up-->
+						<control type="button" id="303">
+							<width>30</width>
+							<height>30</height>
+							<left>40</left>
+							<top>10</top>
+							<label>-</label>
+							<onup>211</onup>
+							<onleft>303</onleft>
+							<onright>304</onright>
+							
+							<texturefocus>images/ArrowUpFO.png</texturefocus>
+							<texturenofocus colordiffuse="grey2">images/ArrowUpNF.png</texturenofocus>
+						</control>
+						
+						<!--move down-->
+						<control type="button" id="304">
+							<width>30</width>
+							<height>30</height>
+							<left>72</left>
+							<top>10</top>
+							<label>-</label>
+							<onup>211</onup>
+							<onleft>303</onleft>
+							<onright>211</onright>
+							<ondown>211</ondown>
+							<texturefocus>images/ArrowDownFO.png</texturefocus>
+							<texturenofocus colordiffuse="grey2">images/ArrowDownNF.png</texturenofocus>
+						</control>
+						
+						<!--remove-->
+
+						
+					</control>
+					
+					<!---control area-->
+					<control type="grouplist" id="300">
+						<left>560</left>
+						<width>1300</width>
+						<height>780</height>
+						<onleft>211</onleft>
+						<onright>211</onright>
+						<onup>300</onup>
+						<ondown>302</ondown>
+						<itemgap>0</itemgap>
+
+						<!--change shortcut-->
+						<control type="button" id="401">
+							<width>1300</width>
+							<label>$ADDON[script.skinshortcuts 32048]</label>
+						</control>
+						
+						<!--change label-->
+						<control type="button" id="305">
+							<width>1300</width>
+							<label>$ADDON[script.skinshortcuts 32025]</label>
+							<label2>$INFO[Container(211).ListItem.Label]</label2>
+							<align>left</align>
+						</control>
+						
+						<!--change action-->
+						<control type="button" id="307">
+							<width>1300</width>
+							<align>left</align>
+							<label>$ADDON[script.skinshortcuts 32027]</label>
+							<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
+						</control>
+						<control type="button" id="311" description="Browse for Thumb">
+							<width>1300</width>
+							<align>left</align>
+							<label>Change Icon</label>
+							
+							
+						</control>						
+						<!--change widget-->
+<!-- 						<control type="button" id="312">
+							<width>1300</width>
+							<align>left</align>
+							<label>$ADDON[script.skinshortcuts 32044]</label>
+							<label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
+							<visible>StringCompare(Window.Property(groupname), mainmenu)</visible>
+						</control> -->
+						
+						<!--edit sub-menu-->
+<!-- 						<control type="button" id="405">
+							<width>1300</width>
+							<align>left</align>
+							<label>$ADDON[script.skinshortcuts 32072]</label>
+							<visible>StringCompare(Window.Property("groupname"),mainmenu)</visible>
+						</control> -->
+
+						<!--add item-->
+						<control type="button" id="301">
+							<width>1300</width>
+							<align>left</align>
+							<label>$ADDON[script.skinshortcuts 32000]</label>
+							<ondown>302</ondown>
+						</control>
+						<control type="button" id="302">
+							<width>1300</width>
+							<align>left</align>
+							<label>Delete</label>
+							<onup>301</onup>
+						</control>						
+					</control>
+					
+				</control>
+				
+				<!--bottom buttons-->
+				
+			</control>
+			
+		</control>
+		
+	</controls>
+	
+</window>
