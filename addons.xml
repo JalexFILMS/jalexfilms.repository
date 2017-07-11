@@ -1355,4 +1355,33 @@ enlaces estan colocado de manera libre en interNET.
 <addon id="repository.quasar" name="Quasar Repository" version="0.9.78" provider-name="scakemyer"><requires></requires><extension point="xbmc.addon.repository" name="Quasar Repository"><info compressed="false">http://localhost:65251/repository/scakemyer/plugin.video.quasar/addons.xml</info><checksum>http://localhost:65251/repository/scakemyer/plugin.video.quasar/addons.xml.md5</checksum><datadir zip="true">http://localhost:65251/repository/scakemyer/</datadir></extension><extension point="xbmc.addon.metadata"><platform>all</platform><summary lang="en">GitHub repository for Quasar updates</summary></extension></addon>
 
 
+<addon id="plugin.video.iptvargento"
+       name="[COLOR dodgerblue]IPTV[COLOR white]ARGE[/COLOR]NTO[/COLOR][COLOR white] 0.[/COLOR][COLOR white]4[/COLOR]"
+       version="4.0"
+       provider-name="[COLOR white][B]LUCIO COLMAN[/B][/COLOR]">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="plugin.video.youtube" optional="true" />
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+  <import addon="script.module.livestreamer" optional="true"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>IPTV ARGENTO entretenimiento y diversion sin Fin!!!</summary>
+    <description>IPTV ARGENTO servicio de entretenimiento peliculas series canales de tv de todo el mundo.
+ MAIL:colmanlucio@hotmail.com **ACTUALIZACION 03/29/2017</description>
+   <platform>all</platform>
+  </extension>
+</addon>
+
+
 </addons>
