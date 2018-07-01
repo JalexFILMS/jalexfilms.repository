@@ -1404,6 +1404,22 @@ enlaces estan colocado de manera libre en interNET.
     </extension>
 </addon>
 
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.Fusion.org" name="Fusion.org" version="1.0" provider-name="Fusion Org">
+  <extension point="xbmc.addon.repository" name="Fusion.org">
+    <info compressed="false">http://bendermutt.com/Repository/addons.xml</info>
+    <checksum>http://bendermutt.com/Repository/addons.xml.md5</checksum>
+    <datadir zip="true">http://bendermutt.com/Repository/</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>.</summary>
+    <description> Kodi Repository</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+
+
 
 
 </addons>
